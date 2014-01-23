@@ -1,9 +1,9 @@
 
 from doit.tools import title_with_actions
 
-from .command import Command
+from .command import BaseCommand
 
-class Copy(Command):
+class Copy(BaseCommand):
     cmd_template = 'install {opts} {source} {dest}'
     base_options = {'D': None} # -D / create all leading folders
 
@@ -12,11 +12,9 @@ class Copy(Command):
         opts = self.opt_str(self.options, kwargs)
 
         cmd = self.cmd_template.format(opts=opts, source=source, dest=dest)
-        if self.sudo:
-            cmd = 'sudo ' + cmd
         return {
-            'name': 'copy-{}'.format(dest),
-            'actions': [cmd],
+            'name': '{}'.format(dest),
+            'actions': [self._action(cmd)],
             'file_dep': [source],
             'targets': [dest],
             'title': title_with_actions,
