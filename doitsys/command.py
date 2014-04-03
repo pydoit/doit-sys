@@ -21,9 +21,12 @@ class BaseCommand(object):
 
     @staticmethod
     def opt_str(*opt_list):
-        """return string with formatted options
-        @param opt_list: list of dict with paramenter options
-        If value is None it is an option flag
+        """Return a string with formatted options for a command line.
+
+        :param list-dict opt_list: list of dict with paramenter options
+
+        If the value of an option is None, option is added wihtout a value.
+        If opt name lenght is just one characher use only one dash.
         """
         options = opt_list[0] if opt_list else {}
         for opt_dict in opt_list[1:]:
