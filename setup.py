@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import os
-import sys
-import codecs
 from setuptools import setup
 
 setup (
@@ -16,7 +13,7 @@ setup (
     platforms = ['any'],
     license = 'MIT',
     packages = ['doitsys'],
-    install_requires = ['doit', ],
+    install_requires = ['doit >= 0.25.0', ],
     classifiers = [
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

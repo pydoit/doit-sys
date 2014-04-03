@@ -1,4 +1,3 @@
-from doit.tools import Interactive
 from .command import BaseCommand
 
 class SSH(BaseCommand):

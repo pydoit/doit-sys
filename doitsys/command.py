@@ -48,6 +48,7 @@ class BaseCommand(object):
 
 
     def __call__(self):
+        """return a task dictionary"""
         raise NotImplementedError()
 
 
