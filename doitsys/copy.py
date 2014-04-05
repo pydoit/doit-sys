@@ -14,7 +14,7 @@ class Copy(BaseCommand):
         cmd = self.cmd_template.format(opts=opts, source=source, dest=dest)
         return {
             'name': '{}'.format(dest),
-            'actions': [self._action(cmd)],
+            'actions': [self.action(cmd)],
             'file_dep': [source],
             'targets': [dest],
             'title': title_with_actions,

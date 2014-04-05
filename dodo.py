@@ -1,6 +1,10 @@
 from doitpy.pyflakes import Pyflakes
 from doitpy.coverage import PythonPackage, Coverage
 
+
+DOIT_CONFIG = {'default_tasks': ['pyflakes']}
+
+
 def task_pyflakes():
     yield Pyflakes().tasks('**/*.py')
 

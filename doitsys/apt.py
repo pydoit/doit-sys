@@ -13,6 +13,6 @@ class Package(BaseCommand):
         return {
             'basename': 'pkg',
             'name': pkg_name,
-            'actions': [self._action(cmd)],
+            'actions': [self.action(cmd)],
             'uptodate': [check_installed.format(pkg_name)]
             }
