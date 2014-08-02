@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup (
-    name = 'doitsys',
+    name = 'doit-sys',
     version = '0.1.dev0',
     author = 'Eduardo Naufel Schettino',
     author_email = 'schettino72@gmail.com',
@@ -13,7 +13,10 @@ setup (
     platforms = ['any'],
     license = 'MIT',
     packages = ['doitsys'],
-    install_requires = ['doit >= 0.25.0', ],
+    install_requires = [
+        'doit >= 0.25.0',
+        'doit-cmd >=0.1, <0.2',
+        ],
     classifiers = [
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

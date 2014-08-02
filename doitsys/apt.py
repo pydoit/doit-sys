@@ -1,4 +1,4 @@
-from doitsys.command import BaseCommand
+from doitcmd import BaseCommand
 
 class Package(BaseCommand):
     cmd_template = 'apt-get {sub_cmd} {opts} {pkg}'

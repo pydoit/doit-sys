@@ -1,7 +1,7 @@
 
 from doit.tools import title_with_actions
 
-from .command import BaseCommand
+from doitcmd import BaseCommand
 
 class Copy(BaseCommand):
     cmd_template = 'install {opts} {source} {dest}'

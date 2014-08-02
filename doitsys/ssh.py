@@ -1,4 +1,4 @@
-from .command import BaseCommand
+from doitcmd import BaseCommand
 
 class SSH(BaseCommand):
     cmd_template = 'ssh {opts} {user}@{host} {cmd}'
