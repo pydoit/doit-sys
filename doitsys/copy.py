@@ -5,7 +5,7 @@ from doitcmd import BaseCommand
 
 class Copy(BaseCommand):
     cmd_template = 'install {opts} {source} {dest}'
-    base_options = {'D': None} # -D / create all leading folders
+    base_options = {'D': True} # -D / create all leading folders
 
     def __call__(self, source, dest, **kwargs):
         """return task dict"""

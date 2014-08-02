@@ -3,6 +3,6 @@ from doitsys import copy
 
 class TestCopy(object):
     def test_call(self):
-        cp = copy.Copy(sudo=True, options={'p':None})
+        cp = copy.Copy(sudo=True, options={'p':True})
         task = cp('foo', 'bar')
-        assert ['sudo install -p -D foo bar'] == task['actions']
+        assert ['sudo install -D -p foo bar'] == task['actions']
